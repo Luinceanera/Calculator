@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{415AE267-B9FB-4429-AEB1-CB9032F1C578}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Calculator.My.MyApplication</StartupObject>
+    <RootNamespace>Calculator</RootNamespace>
+    <AssemblyName>Calculator</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Calculator.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Calculator.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calculation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calculation.Designer.vb">
+      <DependentUpon>Calculation.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Credits.Designer.vb">
+      <DependentUpon>Credits.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Credits.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LanguageSelect.Designer.vb">
+      <DependentUpon>LanguageSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LanguageSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Calculation.resx">
+      <DependentUpon>Calculation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Credits.resx">
+      <DependentUpon>Credits.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LanguageSelect.resx">
+      <DependentUpon>LanguageSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cats\44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\52.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\53.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\54.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\55.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\56.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\57.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\58.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\59.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\60.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\61.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\62.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\63.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\64.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\65.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\66.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\67.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\68.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\69.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\70.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\71.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\72.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\73.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\74.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\75.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\76.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\77.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\78.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\79.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\80.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\81.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\82.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\83.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\84.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\85.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\86.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\87.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\88.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\89.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\91.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\92.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\93.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\94.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\95.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\96.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\97.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\98.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\99.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New folder\100.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
