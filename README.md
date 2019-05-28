@@ -1,6 +1,8 @@
 # Calculator
 
 The Project can be found on this link
+http://github.com - automatic!
+[GitHub](http://github.com)
 https://onedrive.live.com/view.aspx?resid=1A8C8063CB77BD14%2167038&id=documents&wd=target%28Calculator.one%7CAC5BFB36-2BB4-4E2C-8391-6AD98E47B031%2F%29
 onenote:https://d.docs.live.net/1a8c8063cb77bd14/Documents/Programming/Calculator.one#section-id={AC5BFB36-2BB4-4E2C-8391-6AD98E47B031}&end
 
