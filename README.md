@@ -6,14 +6,7 @@ onenote:https://d.docs.live.net/1a8c8063cb77bd14/Documents/Programming/Calculato
 
 #Please Note that this is the link to Microsoft(R) OneNote(TM) document that contains the following:
 1. Tasks
-2. Checklists
-3. Objectives
-4. Results
-5. Items
-   5. Buttons
-   5. Formulas
-   5. Documentation
-
+1. Checklists
 1. Objectives
 1. Results
 1. Items
