@@ -10,9 +10,9 @@ onenote:https://d.docs.live.net/1a8c8063cb77bd14/Documents/Programming/Calculato
 3. Objectives
 4. Results
 5. Items
-  5. Buttons
-  5. Formulas
-  5. Documentation
+   5. Buttons
+   5. Formulas
+   5. Documentation
 
 1. Item 1
 1. Item 2
