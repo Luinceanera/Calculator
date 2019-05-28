@@ -1,10 +1,9 @@
 # Calculator
 
 The Project can be found on this link
-[this link](https://onedrive.live.com/view.aspx?resid=1A8C8063CB77BD14%2167038&id=documents&wd=target%28Calculator.one%7CAC5BFB36-2BB4-4E2C-8391-6AD98E47B031%2F%29)
-onenote:https://d.docs.live.net/1a8c8063cb77bd14/Documents/Programming/Calculator.one#section-id={AC5BFB36-2BB4-4E2C-8391-6AD98E47B031}&end
+[this link](https://onedrive.live.com/redir?resid=1A8C8063CB77BD14%2167038&page=View&wd=target%28Calculator.one%7C%2F%29&wdorigin=717)
 
-#Please Note that this is the link to Microsoft(R) OneNote(TM) document that contains the following:
+Please Note that this is the link to Microsoft(R) OneNote(TM) document that contains the following:
 1. Tasks
 1. Checklists
 1. Objectives
