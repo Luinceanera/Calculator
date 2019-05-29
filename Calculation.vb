@@ -16,12 +16,13 @@ Public Class Calculation
     Dim power As Boolean = False
     Dim result As Boolean = False
     Dim second As Boolean = False
+    Dim secondLock As Boolean = False
     Dim storage As Boolean = False
     Dim circleMode As String = "Radians"
-    ReadOnly version As String = "1.A1"
+    ReadOnly version As String = "1.A2"
 
     Sub Addition(sender As Object, e As EventArgs) Handles buttonAdd.Click
-        entry1 = CDec(textBoxOutputMain.Text)
+        entry1 = CDbl(textBoxOutputMain.Text)
         EntryAlternative()
         If entry1 < 0 Then
             textBoxOutput.Text += "(" + entry1.ToString + ")"
@@ -186,7 +187,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryA(sender As Object, e As EventArgs) Handles buttonA.Click
         If storage = True Then
-            letterEntry(0) = CDec(textBoxOutputMain.Text)
+            letterEntry(0) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("A", language)
             storage = False
             labelStorage.Text = ""
@@ -197,7 +198,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryB(sender As Object, e As EventArgs) Handles buttonB.Click
         If storage = True Then
-            letterEntry(1) = CDec(textBoxOutputMain.Text)
+            letterEntry(1) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("B", language)
             storage = False
             labelStorage.Text = ""
@@ -208,7 +209,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryC(sender As Object, e As EventArgs) Handles buttonC.Click
         If storage = True Then
-            letterEntry(2) = CDec(textBoxOutputMain.Text)
+            letterEntry(2) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("C", language)
             storage = False
             labelStorage.Text = ""
@@ -219,7 +220,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryD(sender As Object, e As EventArgs) Handles buttonD.Click
         If storage = True Then
-            letterEntry(3) = CDec(textBoxOutputMain.Text)
+            letterEntry(3) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("D", language)
             storage = False
             labelStorage.Text = ""
@@ -230,7 +231,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryE(sender As Object, e As EventArgs) Handles buttonE.Click
         If storage = True Then
-            letterEntry(4) = CDec(textBoxOutputMain.Text)
+            letterEntry(4) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("E", language)
             storage = False
             labelStorage.Text = ""
@@ -241,7 +242,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryF(sender As Object, e As EventArgs) Handles buttonF.Click
         If storage = True Then
-            letterEntry(5) = CDec(textBoxOutputMain.Text)
+            letterEntry(5) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("F", language)
             storage = False
             labelStorage.Text = ""
@@ -252,7 +253,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryG(sender As Object, e As EventArgs) Handles buttonG.Click
         If storage = True Then
-            letterEntry(6) = CDec(textBoxOutputMain.Text)
+            letterEntry(6) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("G", language)
             storage = False
             labelStorage.Text = ""
@@ -263,7 +264,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryH(sender As Object, e As EventArgs) Handles buttonH.Click
         If storage = True Then
-            letterEntry(7) = CDec(textBoxOutputMain.Text)
+            letterEntry(7) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("H", language)
             storage = False
             labelStorage.Text = ""
@@ -274,7 +275,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryI(sender As Object, e As EventArgs) Handles buttonI.Click
         If storage = True Then
-            letterEntry(8) = CDec(textBoxOutputMain.Text)
+            letterEntry(8) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("I", language)
             storage = False
             labelStorage.Text = ""
@@ -285,7 +286,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryJ(sender As Object, e As EventArgs) Handles buttonJ.Click
         If storage = True Then
-            letterEntry(9) = CDec(textBoxOutputMain.Text)
+            letterEntry(9) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("J", language)
             storage = False
             labelStorage.Text = ""
@@ -296,7 +297,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryK(sender As Object, e As EventArgs) Handles buttonK.Click
         If storage = True Then
-            letterEntry(10) = CDec(textBoxOutputMain.Text)
+            letterEntry(10) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("K", language)
             storage = False
             labelStorage.Text = ""
@@ -307,7 +308,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryL(sender As Object, e As EventArgs) Handles buttonL.Click
         If storage = True Then
-            letterEntry(11) = CDec(textBoxOutputMain.Text)
+            letterEntry(11) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("L", language)
             storage = False
             labelStorage.Text = ""
@@ -318,7 +319,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryM(sender As Object, e As EventArgs) Handles buttonM.Click
         If storage = True Then
-            letterEntry(12) = CDec(textBoxOutputMain.Text)
+            letterEntry(12) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("M", language)
             storage = False
             labelStorage.Text = ""
@@ -329,7 +330,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryN(sender As Object, e As EventArgs) Handles buttonN.Click
         If storage = True Then
-            letterEntry(13) = CDec(textBoxOutputMain.Text)
+            letterEntry(13) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("N", language)
             storage = False
             labelStorage.Text = ""
@@ -340,7 +341,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryO(sender As Object, e As EventArgs) Handles buttonO.Click
         If storage = True Then
-            letterEntry(14) = CDec(textBoxOutputMain.Text)
+            letterEntry(14) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("O", language)
             storage = False
             labelStorage.Text = ""
@@ -351,7 +352,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryP(sender As Object, e As EventArgs) Handles buttonP.Click
         If storage = True Then
-            letterEntry(15) = CDec(textBoxOutputMain.Text)
+            letterEntry(15) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("P", language)
             storage = False
             labelStorage.Text = ""
@@ -362,7 +363,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryQ(sender As Object, e As EventArgs) Handles buttonQ.Click
         If storage = True Then
-            letterEntry(16) = CDec(textBoxOutputMain.Text)
+            letterEntry(16) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("Q", language)
             storage = False
             labelStorage.Text = ""
@@ -373,7 +374,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryR(sender As Object, e As EventArgs) Handles buttonR.Click
         If storage = True Then
-            letterEntry(17) = CDec(textBoxOutputMain.Text)
+            letterEntry(17) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("R", language)
             storage = False
             labelStorage.Text = ""
@@ -384,7 +385,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryS(sender As Object, e As EventArgs) Handles buttonS.Click
         If storage = True Then
-            letterEntry(18) = CDec(textBoxOutputMain.Text)
+            letterEntry(18) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("S", language)
             storage = False
             labelStorage.Text = ""
@@ -395,7 +396,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryT(sender As Object, e As EventArgs) Handles buttonT.Click
         If storage = True Then
-            letterEntry(19) = CDec(textBoxOutputMain.Text)
+            letterEntry(19) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("T", language)
             storage = False
             labelStorage.Text = ""
@@ -406,7 +407,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryU(sender As Object, e As EventArgs) Handles buttonU.Click
         If storage = True Then
-            letterEntry(20) = CDec(textBoxOutputMain.Text)
+            letterEntry(20) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("U", language)
             storage = False
             labelStorage.Text = ""
@@ -417,7 +418,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryV(sender As Object, e As EventArgs) Handles buttonV.Click
         If storage = True Then
-            letterEntry(21) = CDec(textBoxOutputMain.Text)
+            letterEntry(21) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("V", language)
             storage = False
             labelStorage.Text = ""
@@ -428,7 +429,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryW(sender As Object, e As EventArgs) Handles buttonW.Click
         If storage = True Then
-            letterEntry(22) = CDec(textBoxOutputMain.Text)
+            letterEntry(22) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("W", language)
             storage = False
             labelStorage.Text = ""
@@ -439,7 +440,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryX(sender As Object, e As EventArgs) Handles buttonX.Click
         If storage = True Then
-            letterEntry(23) = CDec(textBoxOutputMain.Text)
+            letterEntry(23) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("X", language)
             storage = False
             labelStorage.Text = ""
@@ -450,7 +451,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryY(sender As Object, e As EventArgs) Handles buttonY.Click
         If storage = True Then
-            letterEntry(24) = CDec(textBoxOutputMain.Text)
+            letterEntry(24) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("Y", language)
             storage = False
             labelStorage.Text = ""
@@ -461,7 +462,7 @@ Public Class Calculation
     End Sub
     Sub ButtonEntryZ(sender As Object, e As EventArgs) Handles buttonZ.Click
         If storage = True Then
-            letterEntry(25) = CDec(textBoxOutputMain.Text)
+            letterEntry(25) = CDbl(textBoxOutputMain.Text)
             labelActivity.Text = Source.GetLetterStored("Z", language)
             storage = False
             labelStorage.Text = ""
@@ -810,7 +811,7 @@ Public Class Calculation
         End If
     End Sub
     Sub Division(sender As Object, e As EventArgs) Handles buttonDivide.Click
-        entry1 = CDec(textBoxOutputMain.Text)
+        entry1 = CDbl(textBoxOutputMain.Text)
         EntryAlternative()
         If entry1 < 0 Then
             textBoxOutput.Text += "(" + entry1.ToString + ")"
@@ -824,7 +825,7 @@ Public Class Calculation
     End Sub
     Sub Entry(sender As Object, e As EventArgs) Handles buttonEnter.Click
         If operatorFunction = True Then
-            entry1 = CDec(textBoxOutputMain.Text)
+            entry1 = CDbl(textBoxOutputMain.Text)
             result = True
             textBoxOutput.Text += entry1.ToString
             If operations = 1 Then
@@ -955,7 +956,7 @@ Public Class Calculation
                 'Coming Soon'
             Next
             For i As Integer = 1 To 27
-                letterEntry(i - 1) = CDec(array(i))
+                letterEntry(i - 1) = CDbl(array(i))
             Next
             circleMode = array(28)
             calculatorFileRead.Close()
@@ -967,7 +968,7 @@ Public Class Calculation
         End If
     End Sub
     Sub Multiplication(sender As Object, e As EventArgs) Handles buttonMultiply.Click
-        entry1 = CDec(textBoxOutputMain.Text)
+        entry1 = CDbl(textBoxOutputMain.Text)
         EntryAlternative()
         If entry1 < 0 Then
             textBoxOutput.Text += "(" + entry1.ToString + ")"
@@ -1142,7 +1143,7 @@ Public Class Calculation
         TheLanguage(a)
     End Sub
     Sub Subtraction(sender As Object, e As EventArgs) Handles buttonSubtract.Click
-        entry1 = CDec(textBoxOutputMain.Text)
+        entry1 = CDbl(textBoxOutputMain.Text)
         EntryAlternative()
         If entry1 < 0 Then
             textBoxOutput.Text += "(" + entry1.ToString + ")"
@@ -1227,13 +1228,13 @@ Public Class Calculation
     End Sub
     Sub EntryPower(sender As Object, e As EventArgs) Handles buttonPower.Click
         If (second = True) Then
-            entry1 = CDec(textBoxOutputMain.Text)
+            entry1 = CDbl(textBoxOutputMain.Text)
             textBoxOutputMain.Text = Sqrt(CDbl(entry1)).ToString
             entry1 = 0
             second = False
             labelSecond.Text = ""
         Else
-            entry1 = CDec(textBoxOutputMain.Text)
+            entry1 = CDbl(textBoxOutputMain.Text)
             EntryAlternative()
             If entry1 < 0 Then
                 textBoxOutput.Text += "(" + entry1.ToString + ")"
@@ -1252,22 +1253,22 @@ Public Class Calculation
         If (second = True) Then
             second = False
             labelSecond.Text = ""
-            If (CDec(textBoxOutputMain.Text) > 1 Or CDec(textBoxOutputMain.Text) < -1) Then
+            If (CDbl(textBoxOutputMain.Text) > 1 Or CDbl(textBoxOutputMain.Text) < -1) Then
                 textBoxOutputMain.Text = Source.GetError("InvSinCosOutOfRange", language)
                 result = True
                 entry1 = 0
                 entry2 = 0
             Else
-                entry1 = CDec(textBoxOutputMain.Text)
+                entry1 = CDbl(textBoxOutputMain.Text)
                 If circleMode = "Radian" Then
                     textBoxOutputMain.Text = Asin(entry1).ToString
                 Else
-                    textBoxOutputMain.Text = ConvRadToDeg(CDec(Asin(entry1))).ToString
+                    textBoxOutputMain.Text = ConvRadToDeg(CDbl(Asin(entry1))).ToString
                 End If
                 entry1 = 0
             End If
         Else
-            Dim a As Double = CDec(textBoxOutputMain.Text)
+            Dim a As Double = CDbl(textBoxOutputMain.Text)
             If circleMode = "Degree" Then
                 entry1 = ConvDegToRad(a)
             Else
@@ -1282,22 +1283,22 @@ Public Class Calculation
         If (second = True) Then
             second = False
             labelSecond.Text = ""
-            If (CDec(textBoxOutputMain.Text) > 1 Or CDec(textBoxOutputMain.Text) < -1) Then
+            If (CDbl(textBoxOutputMain.Text) > 1 Or CDbl(textBoxOutputMain.Text) < -1) Then
                 textBoxOutputMain.Text = Source.GetError("InvSinCosCscCotOutOfRange", language)
                 result = True
                 entry1 = 0
                 entry2 = 0
             Else
-                entry1 = CDec(textBoxOutputMain.Text)
+                entry1 = CDbl(textBoxOutputMain.Text)
                 If circleMode = "Radian" Then
                     textBoxOutputMain.Text = Acos(entry1).ToString
                 Else
-                    textBoxOutputMain.Text = ConvRadToDeg(CDec(Acos(entry1))).ToString
+                    textBoxOutputMain.Text = ConvRadToDeg(CDbl(Acos(entry1))).ToString
                 End If
                 entry1 = 0
             End If
         Else
-            Dim a As Double = CDec(textBoxOutputMain.Text)
+            Dim a As Double = CDbl(textBoxOutputMain.Text)
             If circleMode = "Degree" Then
                 entry1 = ConvDegToRad(a)
             Else
@@ -1321,10 +1322,10 @@ Public Class Calculation
         Else
             If (circleMode = "Radian") Then
                 While (a > (2 * PI))
-                    a -= CDec(2 * PI)
+                    a -= CDbl(2 * PI)
                 End While
                 While (a < (-2 * PI))
-                    a += CDec(2 * PI)
+                    a += CDbl(2 * PI)
                 End While
                 If (Abs(a) = (PI / 2) Or (Abs(a) = (3 * PI) / 2)) Then
                     textBoxOutputMain.Text = "±∞"
@@ -1354,17 +1355,17 @@ Public Class Calculation
         If (second = True) Then
             second = False
             labelSecond.Text = ""
-            If (CDec(textBoxOutputMain.Text) > 1 Or CDec(textBoxOutputMain.Text) < -1) Then
+            If (CDbl(textBoxOutputMain.Text) > 1 Or CDbl(textBoxOutputMain.Text) < -1) Then
                 textBoxOutputMain.Text = Source.GetError("InvSinCosCscCotOutOfRange", language)
                 result = True
                 entry1 = 0
                 entry2 = 0
-            ElseIf (CDec(textBoxOutputMain.Text) = 0) Then
+            ElseIf (CDbl(textBoxOutputMain.Text) = 0) Then
                 textBoxOutputMain.Text = "±∞"
                 result = True
             Else
-                Dim a As Double = CDec(textBoxOutputMain.Text)
-                entry1 = 1 / Asin(CDec(a))
+                Dim a As Double = CDbl(textBoxOutputMain.Text)
+                entry1 = 1 / Asin(CDbl(a))
                 If (circleMode = "Radian") Then
                     textBoxOutputMain.Text = entry1.ToString
                 Else
@@ -1374,9 +1375,9 @@ Public Class Calculation
         Else
             Dim a As Double
             If (labelCircle.Text = "Degree") Then
-                a = ConvDegToRad(CDec(textBoxOutputMain.Text))
+                a = ConvDegToRad(CDbl(textBoxOutputMain.Text))
             Else
-                a = CDec(textBoxOutputMain.Text)
+                a = CDbl(textBoxOutputMain.Text)
             End If
             While (a > (2 * PI))
                 a -= (2 * PI)
@@ -1388,7 +1389,7 @@ Public Class Calculation
                 textBoxOutputMain.Text = "±∞"
                 result = True
             Else
-                entry1 = CDec(1 / Cos(CDec(a)))
+                entry1 = CDbl(1 / Cos(CDbl(a)))
                 textBoxOutputMain.Text = entry1.ToString
                 entry1 = 0
             End If
@@ -1399,18 +1400,18 @@ Public Class Calculation
         If (second = True) Then
             second = False
             labelSecond.Text = ""
-            If (CDec(textBoxOutputMain.Text) > 1 Or CDec(textBoxOutputMain.Text) < -1) Then
+            If (CDbl(textBoxOutputMain.Text) > 1 Or CDbl(textBoxOutputMain.Text) < -1) Then
                 textBoxOutputMain.Text = Source.GetError("InvSinCosCscCotOutOfRange", language)
                 result = True
                 entry1 = 0
                 entry2 = 0
-            ElseIf (CDec(textBoxOutputMain.Text) = 0) Then
+            ElseIf (CDbl(textBoxOutputMain.Text) = 0) Then
                 textBoxOutputMain.Text = "±∞"
                 result = True
             Else
-                Dim a As Double = CDec(textBoxOutputMain.Text)
+                Dim a As Double = CDbl(textBoxOutputMain.Text)
                 Try
-                    entry1 = 1 / Acos(CDec(a))
+                    entry1 = 1 / Acos(CDbl(a))
                     If (circleMode = "Radian") Then
                         textBoxOutputMain.Text = entry1.ToString
                     Else
@@ -1424,9 +1425,9 @@ Public Class Calculation
         Else
             Dim a As Double
             If (labelCircle.Text = "Degree") Then
-                a = ConvDegToRad(CDec(textBoxOutputMain.Text))
+                a = ConvDegToRad(CDbl(textBoxOutputMain.Text))
             Else
-                a = CDec(textBoxOutputMain.Text)
+                a = CDbl(textBoxOutputMain.Text)
             End If
             While (a > (2 * PI))
                 a -= (2 * PI)
@@ -1438,7 +1439,7 @@ Public Class Calculation
                 textBoxOutputMain.Text = "±∞"
                 result = True
             Else
-                entry1 = CDec(1 / Cos(CDec(a)))
+                entry1 = CDbl(1 / Cos(CDbl(a)))
                 textBoxOutputMain.Text = entry1.ToString
                 entry1 = 0
             End If
@@ -1451,16 +1452,16 @@ Public Class Calculation
                 textBoxOutputMain.Text = "±∞"
                 result = True
             Else
-                entry1 = CDec(1 / Atan(CDec(textBoxOutputMain.Text)))
+                entry1 = CDbl(1 / Atan(CDbl(textBoxOutputMain.Text)))
                 textBoxOutputMain.Text = entry1.ToString
                 entry1 = 0
             End If
         Else
             Dim a As Double
             If (labelCircle.Text = "Degree") Then
-                a = ConvDegToRad(CDec(textBoxOutputMain.Text))
+                a = ConvDegToRad(CDbl(textBoxOutputMain.Text))
             Else
-                a = CDec(textBoxOutputMain.Text)
+                a = CDbl(textBoxOutputMain.Text)
             End If
             While (a > (2 * PI))
                 a -= (2 * PI)
@@ -1472,7 +1473,7 @@ Public Class Calculation
                 textBoxOutputMain.Text = "±∞"
                 result = True
             Else
-                entry1 = CDec(1 / Tan(CDec(a)))
+                entry1 = CDbl(1 / Tan(CDbl(a)))
                 textBoxOutputMain.Text = entry1.ToString
                 entry1 = 0
             End If
@@ -1525,11 +1526,11 @@ Public Class Calculation
         CalculatorCheck()
     End Sub
     Function ConvDegToRad(degree As Double) As Double
-        Dim radian As Double = CDec((degree * PI) / 180)
+        Dim radian As Double = CDbl((degree * PI) / 180)
         Return radian
     End Function
     Function ConvRadToDeg(radian As Double) As Double
-        Dim degree As Double = CDec((radian * 180) / PI)
+        Dim degree As Double = CDbl((radian * 180) / PI)
         Return degree
     End Function
     Sub CalculatorCheck()
@@ -1549,4 +1550,129 @@ Public Class Calculation
         textBoxOutputMain.Text = entry1.ToString
         entry1 = 0
     End Sub
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim p As New Drawing2D.GraphicsPath
+        p.StartFigure()
+        p.AddArc(New Rectangle(0, 0, 40, 40), 180, 90)
+        p.AddLine(40, 0, button1.Width - 40, 0)
+        p.AddArc(New Rectangle(button1.Width - 40, 0, 40, 40), -90, 90)
+        p.AddLine(button1.Width, 40, button1.Width, button1.Height - 40)
+        p.AddArc(New Rectangle(button1.Width - 40, button1.Height - 40, 40, 40), 0, 90)
+        p.AddLine(button1.Width - 40, button1.Height, 40, button1.Height)
+        p.AddArc(New RectangleF(0, button1.Height - 40, 40, 40), 90, 90)
+        p.CloseFigure()
+        button1.Region = New Region(p)
+    End Sub
+    Sub Factorial(sender As Object, e As EventArgs) Handles buttonFactorial.Click
+        If (second = True) Then
+        Else
+            Dim facteur As Integer = 1
+            Dim facteuse As Integer = Math.Abs(CInt(textBoxOutputMain.Text))
+            If (CInt(textBoxOutputMain.Text) < 0) Then
+                facteur *= -1
+            Else
+                'Do Nothing'
+            End If
+            While (facteuse > 1)
+                facteur *= facteuse
+                facteuse -= 1
+            End While
+        End If
+    End Sub
 End Class
+
+'CTRL-(K then C) = Comment
+'CTRL-(K then /) = UnComment
+'Dim numberValue As Integer
+'Dim rand As New Random
+'numberValue = rand.Next(44) + 1
+'Select Case numberValue
+'Case 1
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._1
+'Case 2
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._2
+'Case 3
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._3
+'Case 4
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._4
+'Case 5
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._5
+'Case 6
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._6
+'Case 7
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._7
+'Case 8
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._8
+'Case 9
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._9
+'Case 10
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._10
+'Case 11
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._11
+'Case 12
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._12
+'Case 13
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._13
+'Case 14
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._14
+'Case 15
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._15
+'Case 16
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._16
+'Case 17
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._17
+'Case 18
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._18
+'Case 19
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._19
+'Case 20
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._20
+'Case 21
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._21
+'Case 22
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._22
+'Case 23
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._23
+'Case 24
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._24
+'Case 25
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._25
+'Case 26
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._26
+'Case 27
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._27
+'Case 28
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._28
+'Case 29
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._29
+'Case 30
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._30
+'Case 31
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._31
+'Case 32
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._32
+'Case 33
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._33
+'Case 34
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._34
+'Case 35
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._35
+'Case 36
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._36
+'Case 37
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._37
+'Case 38
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._38
+'Case 39
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._39
+'Case 40
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._40
+'Case 41
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._41
+'Case 42
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._44
+'Case 43
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._43
+'Case 44
+'Me.BackgroundImage = Global.Calculator.My.Resources.Resources._44
+'End Select

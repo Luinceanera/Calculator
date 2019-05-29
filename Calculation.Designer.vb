@@ -109,6 +109,7 @@ Partial Class Calculation
         Me.toolStripFrench = New System.Windows.Forms.ToolStripMenuItem()
         Me.toolStripItalian = New System.Windows.Forms.ToolStripMenuItem()
         Me.toolStripPortuguese = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -731,7 +732,6 @@ Partial Class Calculation
         Me.buttonFactorial.Size = New System.Drawing.Size(30, 30)
         Me.buttonFactorial.TabIndex = 18
         Me.buttonFactorial.UseVisualStyleBackColor = False
-        Me.buttonFactorial.Visible = False
         '
         'buttonG
         '
@@ -1298,7 +1298,7 @@ Partial Class Calculation
         'toolTipExit
         '
         Me.toolTipExit.Name = "toolTipExit"
-        Me.toolTipExit.Size = New System.Drawing.Size(180, 22)
+        Me.toolTipExit.Size = New System.Drawing.Size(67, 22)
         '
         'toolTipOption
         '
@@ -1309,148 +1309,56 @@ Partial Class Calculation
         'toolTipInformation
         '
         Me.toolTipInformation.Name = "toolTipInformation"
-        Me.toolTipInformation.Size = New System.Drawing.Size(180, 22)
+        Me.toolTipInformation.Size = New System.Drawing.Size(67, 22)
         '
         'toolTipLanguage
         '
         Me.toolTipLanguage.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolStripGerman, Me.toolStripEnglish, Me.toolStripSpanish, Me.toolStripFrench, Me.toolStripItalian, Me.toolStripPortuguese})
         Me.toolTipLanguage.Name = "toolTipLanguage"
-        Me.toolTipLanguage.Size = New System.Drawing.Size(180, 22)
+        Me.toolTipLanguage.Size = New System.Drawing.Size(67, 22)
         '
         'toolStripGerman
         '
         Me.toolStripGerman.Name = "toolStripGerman"
-        Me.toolStripGerman.Size = New System.Drawing.Size(180, 22)
+        Me.toolStripGerman.Size = New System.Drawing.Size(134, 22)
         Me.toolStripGerman.Text = "Deusch"
         '
         'toolStripEnglish
         '
         Me.toolStripEnglish.Name = "toolStripEnglish"
-        Me.toolStripEnglish.Size = New System.Drawing.Size(180, 22)
+        Me.toolStripEnglish.Size = New System.Drawing.Size(134, 22)
         Me.toolStripEnglish.Text = "English"
         '
         'toolStripSpanish
         '
         Me.toolStripSpanish.Name = "toolStripSpanish"
-        Me.toolStripSpanish.Size = New System.Drawing.Size(180, 22)
+        Me.toolStripSpanish.Size = New System.Drawing.Size(134, 22)
         Me.toolStripSpanish.Text = "Español"
         '
         'toolStripFrench
         '
         Me.toolStripFrench.Name = "toolStripFrench"
-        Me.toolStripFrench.Size = New System.Drawing.Size(180, 22)
+        Me.toolStripFrench.Size = New System.Drawing.Size(134, 22)
         Me.toolStripFrench.Text = "Français"
         '
         'toolStripItalian
         '
         Me.toolStripItalian.Name = "toolStripItalian"
-        Me.toolStripItalian.Size = New System.Drawing.Size(180, 22)
+        Me.toolStripItalian.Size = New System.Drawing.Size(134, 22)
         Me.toolStripItalian.Text = "Italiano"
         '
         'toolStripPortuguese
         '
         Me.toolStripPortuguese.Name = "toolStripPortuguese"
-        Me.toolStripPortuguese.Size = New System.Drawing.Size(180, 22)
+        Me.toolStripPortuguese.Size = New System.Drawing.Size(134, 22)
         Me.toolStripPortuguese.Text = "Portuguese"
         '
         'Calculation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Dim numberValue As Integer
-        Dim rand As New Random
-        numberValue = rand.Next(44) + 1
-        Select Case numberValue
-            Case 1
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._1
-            Case 2
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._2
-            Case 3
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._3
-            Case 4
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._4
-            Case 5
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._5
-            Case 6
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._6
-            Case 7
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._7
-            Case 8
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._8
-            Case 9
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._9
-            Case 10
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._10
-            Case 11
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._11
-            Case 12
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._12
-            Case 13
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._13
-            Case 14
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._14
-            Case 15
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._15
-            Case 16
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._16
-            Case 17
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._17
-            Case 18
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._18
-            Case 19
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._19
-            Case 20
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._20
-            Case 21
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._21
-            Case 22
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._22
-            Case 23
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._23
-            Case 24
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._24
-            Case 25
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._25
-            Case 26
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._26
-            Case 27
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._27
-            Case 28
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._28
-            Case 29
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._29
-            Case 30
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._30
-            Case 31
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._31
-            Case 32
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._32
-            Case 33
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._33
-            Case 34
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._34
-            Case 35
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._35
-            Case 36
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._36
-            Case 37
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._37
-            Case 38
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._38
-            Case 39
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._39
-            Case 40
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._40
-            Case 41
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._41
-            Case 42
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._44
-            Case 43
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._43
-            Case 44
-                Me.BackgroundImage = Global.Calculator.My.Resources.Resources._44
-        End Select
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(784, 761)
         Me.Controls.Add(Me.textBoxOutput)
@@ -1625,6 +1533,7 @@ Partial Class Calculation
     Friend WithEvents toolStripFrench As ToolStripMenuItem
     Friend WithEvents toolStripItalian As ToolStripMenuItem
     Friend WithEvents toolStripPortuguese As ToolStripMenuItem
+    Friend WithEvents ToolTip1 As ToolTip
 End Class
 
 
